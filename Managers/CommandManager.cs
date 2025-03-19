@@ -18,7 +18,7 @@ namespace ExampleCommandConsole.Managers
 
         public void UnregisterCommand(string name)
         {
-            if (commands.TryGetValue(name.ToLower(),out var cmd))
+            if (commands.TryGetValue(name.ToLower(), out var cmd))
             {
                 commands.Remove(name.ToLower());
             }
@@ -26,15 +26,25 @@ namespace ExampleCommandConsole.Managers
 
         public void RunCommand(string name, string[] args = null)
         {
-            if (commands.TryGetValue(name.ToLower(), out var command)) {
+            if (commands.TryGetValue(name.ToLower(), out var command))
+            {
                 try
                 {
                     command.Execute(args ?? []);
-                } catch (Exception ex)
+                }
+                catch (Exception ex)
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine(ex);
                 }
+
+                return;
             }
+
+            if (name == null || name.Trim().Length < 1) return;
+
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine($"Error: Unknown Command '{name}'");
         }
     }
 }

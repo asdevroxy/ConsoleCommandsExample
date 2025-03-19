@@ -7,14 +7,18 @@ namespace ExampleCommandConsole
     internal class Program
     {
         public static bool Quit = false;
+        public static int ExitCode = 0;
 
         static void Main(string[] args)
         {
+            Console.Title = "ExampleCommandConsole";
             Dictionary<string, Command> defaultCommands = new()
             {
                 { "clear", new CommandClear() },
                 { "echo", new CommandEcho() },
-                { "exit", new CommandExit() }
+                { "exit", new CommandExit() },
+                { "cat", new CommandCat() },
+                { "start", new CommandStart() }, 
             };
 
             foreach (var command in defaultCommands)
@@ -30,9 +34,16 @@ namespace ExampleCommandConsole
 
             while (!Quit)
             {
+                Console.ForegroundColor = ConsoleColor.White;
+
                 Console.Write("> ");
                 string command = Console.ReadLine();
                 Process(command);
+            }
+
+            if (ExitCode != 0)
+            {
+                Environment.Exit(ExitCode);
             }
         }
 
