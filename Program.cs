@@ -11,6 +11,8 @@ namespace ExampleCommandConsole
 
         static void Main(string[] args)
         {
+            var origColor = Console.ForegroundColor;
+
             Console.Title = "ExampleCommandConsole";
             Dictionary<string, Command> defaultCommands = new()
             {
@@ -29,7 +31,7 @@ namespace ExampleCommandConsole
             if (args.Length > 0)
             {
                 Process(string.Join(" ", args));
-                return;
+                Quit = true;
             }
 
             while (!Quit)
@@ -40,6 +42,8 @@ namespace ExampleCommandConsole
                 string command = Console.ReadLine();
                 Process(command);
             }
+
+            Console.ForegroundColor = origColor;
 
             if (ExitCode != 0)
             {
