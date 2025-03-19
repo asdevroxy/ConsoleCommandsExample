@@ -1,0 +1,14 @@
+C:\Users\User1\source\repos\ExampleCommandConsole\ExampleCommandConsole\obj\Debug\net8.0\ExampleCommandConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User1\source\repos\ExampleCommandConsole\ExampleCommandConsole\obj\Debug\net8.0\ExampleCommandConsole.AssemblyInfoInputs.cache
+C:\Users\User1\source\repos\ExampleCommandConsole\ExampleCommandConsole\obj\Debug\net8.0\ExampleCommandConsole.AssemblyInfo.cs
+C:\Users\User1\source\repos\ExampleCommandConsole\ExampleCommandConsole\obj\Debug\net8.0\ExampleCommandConsole.csproj.CoreCompileInputs.cache
+C:\Users\User1\source\repos\ExampleCommandConsole\ExampleCommandConsole\bin\Debug\net8.0\ExampleCommandConsole.exe
+C:\Users\User1\source\repos\ExampleCommandConsole\ExampleCommandConsole\bin\Debug\net8.0\ExampleCommandConsole.deps.json
+C:\Users\User1\source\repos\ExampleCommandConsole\ExampleCommandConsole\bin\Debug\net8.0\ExampleCommandConsole.runtimeconfig.json
+C:\Users\User1\source\repos\ExampleCommandConsole\ExampleCommandConsole\bin\Debug\net8.0\ExampleCommandConsole.dll
+C:\Users\User1\source\repos\ExampleCommandConsole\ExampleCommandConsole\bin\Debug\net8.0\ExampleCommandConsole.pdb
+C:\Users\User1\source\repos\ExampleCommandConsole\ExampleCommandConsole\obj\Debug\net8.0\ExampleCommandConsole.dll
+C:\Users\User1\source\repos\ExampleCommandConsole\ExampleCommandConsole\obj\Debug\net8.0\refint\ExampleCommandConsole.dll
+C:\Users\User1\source\repos\ExampleCommandConsole\ExampleCommandConsole\obj\Debug\net8.0\ExampleCommandConsole.pdb
+C:\Users\User1\source\repos\ExampleCommandConsole\ExampleCommandConsole\obj\Debug\net8.0\ExampleCommandConsole.genruntimeconfig.cache
+C:\Users\User1\source\repos\ExampleCommandConsole\ExampleCommandConsole\obj\Debug\net8.0\ref\ExampleCommandConsole.dll
