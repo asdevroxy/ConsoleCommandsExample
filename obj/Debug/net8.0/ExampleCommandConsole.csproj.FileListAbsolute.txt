@@ -12,3 +12,4 @@ C:\Users\User1\source\repos\ExampleCommandConsole\ExampleCommandConsole\obj\Debu
 C:\Users\User1\source\repos\ExampleCommandConsole\ExampleCommandConsole\obj\Debug\net8.0\ExampleCommandConsole.pdb
 C:\Users\User1\source\repos\ExampleCommandConsole\ExampleCommandConsole\obj\Debug\net8.0\ExampleCommandConsole.genruntimeconfig.cache
 C:\Users\User1\source\repos\ExampleCommandConsole\ExampleCommandConsole\obj\Debug\net8.0\ref\ExampleCommandConsole.dll
+C:\Users\User1\source\repos\ExampleCommandConsole\ExampleCommandConsole\obj\Debug\net8.0\ExampleCommandConsole.sourcelink.json
