@@ -1,4 +1,5 @@
-﻿using ExampleCommandConsole.Commands;
+﻿using System.Diagnostics;
+using ExampleCommandConsole.Commands;
 
 namespace ExampleCommandConsole.Managers
 {
@@ -43,8 +44,22 @@ namespace ExampleCommandConsole.Managers
 
             if (name == null || name.Trim().Length < 1) return;
 
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"Error: Unknown Command '{name}'");
+            var path = Program.PATH;
+            bool found = false;
+            foreach (var pathVar in path)
+            {
+                var p = @$"{pathVar}\{name}.exe";
+                if (!File.Exists(p)) continue;
+
+                found = true;
+                Process.Start(p, (args == null  || args.Length < 1) ? "" : string.Join(" ", args)).WaitForExit();
+            }
+
+            if (!found)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"Error: Unknown Command '{name}'");
+            }
         }
     }
 }

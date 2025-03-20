@@ -9,18 +9,31 @@ namespace ExampleCommandConsole
         public static bool Quit = false;
         public static int ExitCode = 0;
 
+        public static string ExecutionDirectory { get; private set; }
+
+        internal static List<string> PATH = [];
+
         static void Main(string[] args)
         {
+            string[] paths = Environment.GetEnvironmentVariable("path").Split(";");
+            PATH.AddRange(paths);
+
+            ExecutionDirectory = Environment.CurrentDirectory;
             var origColor = Console.ForegroundColor;
 
             Console.Title = "ExampleCommandConsole";
             Dictionary<string, Command> defaultCommands = new()
             {
+                { "cd", new CommandCD() },
+                { "cat", new CommandCat() },
+
                 { "clear", new CommandClear() },
+                
                 { "echo", new CommandEcho() },
                 { "exit", new CommandExit() },
-                { "cat", new CommandCat() },
-                { "start", new CommandStart() }, 
+                { "exec", new CommandExec() },
+                
+                { "start", new CommandStart() },
             };
 
             foreach (var command in defaultCommands)
@@ -38,7 +51,7 @@ namespace ExampleCommandConsole
             {
                 Console.ForegroundColor = ConsoleColor.White;
 
-                Console.Write("> ");
+                Console.Write($"{Environment.CurrentDirectory}> ");
                 string command = Console.ReadLine();
                 Process(command);
             }
